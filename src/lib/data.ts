@@ -1,0 +1,142 @@
+import brownie from "@/assets/brownie.jpg";
+import blackforest from "@/assets/blackforest.jpg";
+import redvelvet from "@/assets/redvelvet.jpg";
+import birthday from "@/assets/birthday.jpg";
+
+export type Product = {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  longDescription: string;
+  stock: number;
+  rating: number;
+  category: string;
+  image: string;
+  features: string[];
+};
+
+export const products: Product[] = [
+  {
+    id: "chocolate-brownie",
+    name: "Chocolate Brownie",
+    price: 120,
+    description: "Rich, fudgy brownie made with premium chocolate.",
+    longDescription:
+      "Rich and fudgy brownie made with premium cocoa and baked fresh daily. A timeless classic with a crackly top and a dense, melt-in-your-mouth centre.",
+    stock: 25,
+    rating: 4.8,
+    category: "Brownie",
+    image: brownie,
+    features: ["Freshly Baked", "Premium Ingredients", "Best Seller", "Made Daily"],
+  },
+  {
+    id: "black-forest-cake",
+    name: "Black Forest Cake",
+    price: 350,
+    description: "Fresh cream cake layered with chocolate sponge.",
+    longDescription:
+      "Light chocolate sponge layered with whipped fresh cream, dark cherries and delicate chocolate shavings. A celebration in every slice.",
+    stock: 12,
+    rating: 4.7,
+    category: "Cake",
+    image: blackforest,
+    features: ["Freshly Baked", "Premium Ingredients", "Popular Choice", "Made Daily"],
+  },
+  {
+    id: "red-velvet-pastry",
+    name: "Red Velvet Pastry",
+    price: 90,
+    description: "Soft pastry with cream cheese frosting.",
+    longDescription:
+      "Velvety red sponge crowned with a generous swirl of tangy cream cheese frosting. Soft, fluffy and beautifully balanced.",
+    stock: 8,
+    rating: 4.6,
+    category: "Pastry",
+    image: redvelvet,
+    features: ["Freshly Baked", "Premium Ingredients", "Popular Choice"],
+  },
+  {
+    id: "birthday-cake",
+    name: "Birthday Cake",
+    price: 600,
+    description: "Custom birthday cakes in multiple flavours.",
+    longDescription:
+      "Custom-designed birthday cakes available in a range of flavours. Crafted with premium ingredients and finished with elegant detail for your special day.",
+    stock: 5,
+    rating: 4.9,
+    category: "Birthday Cake",
+    image: birthday,
+    features: ["Freshly Baked", "Premium Ingredients", "Best Seller", "Made Daily"],
+  },
+];
+
+export const categories = [
+  "Cake",
+  "Brownie",
+  "Pastry",
+  "Dessert",
+  "Cookies",
+  "Birthday Cake",
+];
+
+export type CategoryMeta = {
+  name: string;
+  slug: string;
+  image: string;
+};
+
+export const categoryMeta: CategoryMeta[] = [
+  { name: "Cake", slug: "cake", image: blackforest },
+  { name: "Brownie", slug: "brownie", image: brownie },
+  { name: "Pastry", slug: "pastry", image: redvelvet },
+  { name: "Dessert", slug: "dessert", image: redvelvet },
+  { name: "Cookies", slug: "cookies", image: brownie },
+  { name: "Birthday Cake", slug: "birthday-cake", image: birthday },
+];
+
+export type Review = {
+  id: string;
+  name: string;
+  rating: number;
+  message: string;
+  date: string;
+};
+
+export const initialReviews: Review[] = [
+  {
+    id: "r1",
+    name: "Hari",
+    rating: 5,
+    message: "Very tasty cake and excellent service.",
+    date: "2 weeks ago",
+  },
+  {
+    id: "r2",
+    name: "Akash",
+    rating: 5,
+    message: "The brownie is absolutely heavenly, rich and full of flavour.",
+    date: "1 month ago",
+  },
+  {
+    id: "r3",
+    name: "Vignesh",
+    rating: 4,
+    message: "Lots of dessert options with reasonable prices.",
+    date: "1 month ago",
+  },
+];
+
+export const bakery = {
+  name: "Cookie Jar",
+  tagline: "Bakery & Cake Shop",
+  rating: 4.6,
+  reviewCount: 11,
+  address: "Main Road, Trunk Road, Sattur, Tamil Nadu 626203",
+  city: "Sattur, Tamil Nadu",
+  phone: "+91 82703 95213",
+  phoneRaw: "+918270395213",
+  closes: "10:00 PM",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Cookie+Jar+Bakery+Sattur+Tamil+Nadu",
+};
